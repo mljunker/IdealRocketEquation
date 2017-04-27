@@ -1,0 +1,23 @@
+function [] = rocketequation(minitial,mfinal)
+%Takes an isp and calculated a predicted rocket path from the ideal rocket
+%equation
+%% Constants
+    g = 9.80655;
+%% Initial Launch
+    isp = statictest;
+    deltaV = isp*g*log(minitial/mfinal);
+%% Projectile Stage
+    %Forces: gravity, assuming 45 degree start
+    yaccel = -g;
+    xaccel = 0;
+    yvel = (2/sqrt2)*deltaV;
+    xvel = (2/sqrt(2)
+    t = linspace(0,15,100);
+    vely = (2/sqrt2)*deltaV-g.*t;
+    posinstant = deltaV*t-0.5*g.*t.^2;
+    figure
+    plot(t,posinstant);
+    title('
+%%
+end
+
